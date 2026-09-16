@@ -1,0 +1,13 @@
+base: ../mlp.yaml
+
+experiment:
+  name: mlp_no_aug
+  group: ablation
+  reference: mlp
+  changed_factor: "augmentation (random crop pad=2 + horizontal flip) -> none"
+  hypothesis: "An MLP on flattened pixels has no built-in translation invariance, so augmentation acts as a stronger regularizer for it than for the CNN; removing it should widen the train-val gap more than for cnn_no_aug."
+
+data:
+  augment:
+    random_crop_padding: 0
+    hflip: false

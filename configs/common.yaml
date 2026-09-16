@@ -1,0 +1,59 @@
+# Shared defaults for every Assignment 1 experiment.
+# Dataset configs (configs/<dataset>/_base.yaml) and model configs override these.
+# NOTE: write floats with a dot (0.001), not 1e-3 - PyYAML reads "1e-3" as a string.
+
+seed: 42                    # TRAINING seed (init, shuffling, augmentation). Override with --seed.
+deterministic: false        # true -> cuDNN deterministic + torch deterministic algorithms (slower)
+
+experiment:
+  name: null                # set by each experiment config; used as run folder name
+  group: main               # main | ablation | debug
+  reference: null           # ablations: name of the experiment they are compared against
+  changed_factor: null
+  hypothesis: null
+
+data:
+  name: null                # mnist | fashion_mnist | cifar10
+  raw_root: data/raw
+  split_dir: data/splits
+  split_seed: 42            # FIXED for every model -> identical train/val/test partitions
+  val_fraction: 0.1         # stratified hold-out carved from the official training set
+  num_workers: 2
+  augment:
+    random_crop_padding: 0
+    hflip: false
+
+train:
+  epochs: 40
+  batch_size: 128
+  eval_batch_size: 512
+  label_smoothing: 0.0
+  grad_clip: 1.0
+  amp: true                 # mixed precision; only active on CUDA
+  early_stopping_patience: 10
+  checkpoint_metric: val_macro_f1   # val_macro_f1 | val_acc | val_loss
+  show_progress: true
+
+optim:
+  name: adamw               # adamw | adam | sgd
+  lr: 0.001
+  weight_decay: 0.0001
+  momentum: 0.9             # sgd only
+
+scheduler:
+  name: cosine              # cosine | constant (both with optional linear warm-up)
+  warmup_epochs: 1
+  min_lr_ratio: 0.01
+
+eval:
+  bootstrap_samples: 1000
+  n_examples: 25
+  inference:
+    batch_size: 256
+    warmup_iters: 10
+    timed_iters: 50
+    latency_samples: 200
+    amp: false              # timing is measured in FP32 for every model
+
+output:
+  root: outputs/runs

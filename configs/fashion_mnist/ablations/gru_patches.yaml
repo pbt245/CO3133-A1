@@ -1,0 +1,12 @@
+base: ../gru.yaml
+
+experiment:
+  name: gru_patches
+  group: ablation
+  reference: gru
+  changed_factor: "timestep definition: rows (28 steps x 28 dims) -> 4x4 patches in raster order (49 steps x 16 dims)"
+  hypothesis: "Patch sequences are longer and each step carries less context, and vertically adjacent patches are 7 steps apart, so the GRU is expected to perform no better than with rows."
+
+model:
+  sequence_mode: patches
+  patch_size: 4

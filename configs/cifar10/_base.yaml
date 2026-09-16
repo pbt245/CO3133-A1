@@ -1,0 +1,14 @@
+# CIFAR-10: optional extension dataset.
+# Official split: 50,000 train / 10,000 test.
+# Our split: 45,000 train / 5,000 val (stratified, split_seed=42) / 10,000 official test.
+base: ../common.yaml
+
+data:
+  name: cifar10
+  augment:
+    random_crop_padding: 4
+    hflip: true
+
+train:
+  epochs: 60
+  early_stopping_patience: 15

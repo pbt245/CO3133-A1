@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+
+# raw datasets are downloaded by scripts/download_data.py (not committed)
+data/raw/
+
+# checkpoints are shared through a release / drive link (see README), not git
+outputs/runs/**/checkpoints/
+outputs/results_bundle_*.zip

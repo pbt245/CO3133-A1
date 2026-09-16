@@ -1,0 +1,15 @@
+base: _base.yaml
+
+experiment:
+  name: mlp
+
+model:
+  name: mlp
+  hidden_dims: [512, 256]
+  activation: relu
+  dropout: 0.3
+  batch_norm: true
+
+optim:
+  lr: 0.001
+  weight_decay: 0.0001

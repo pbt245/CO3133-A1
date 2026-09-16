@@ -1,0 +1,11 @@
+base: ../transformer.yaml
+
+experiment:
+  name: transformer_no_pos
+  group: ablation
+  reference: transformer
+  changed_factor: "positional encoding: learned -> none"
+  hypothesis: "Self-attention is permutation-equivariant; without positional encoding the CLS output only sees an unordered set of patches, so macro-F1 is expected to drop."
+
+model:
+  pos_encoding: none

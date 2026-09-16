@@ -1,0 +1,14 @@
+base: _base.yaml
+
+experiment:
+  name: cnn
+
+model:
+  name: cnn
+  channels: [64, 128, 256]  # 32x32 -> 16x16 -> 8x8 -> 4x4 -> global avg pool
+  block_dropout: 0.1
+  head_dropout: 0.3
+
+optim:
+  lr: 0.001
+  weight_decay: 0.0005

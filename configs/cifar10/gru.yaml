@@ -1,0 +1,18 @@
+base: _base.yaml
+
+experiment:
+  name: gru
+
+model:
+  name: gru
+  sequence_mode: rows
+  patch_size: 4
+  hidden_size: 256
+  num_layers: 2
+  dropout: 0.2
+  bidirectional: false
+  head_dropout: 0.2
+
+optim:
+  lr: 0.001
+  weight_decay: 0.0001

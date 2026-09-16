@@ -1,0 +1,11 @@
+base: _base.yaml
+
+experiment:
+  name: linear
+
+model:
+  name: linear
+
+optim:
+  lr: 0.001
+  weight_decay: 0.0

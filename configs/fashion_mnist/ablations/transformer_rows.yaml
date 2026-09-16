@@ -1,0 +1,11 @@
+base: ../transformer.yaml
+
+experiment:
+  name: transformer_rows
+  group: ablation
+  reference: transformer
+  changed_factor: "token representation: 4x4 patches (49 tokens) -> image rows (28 tokens of dim 28)"
+  hypothesis: "Row tokens mix pixels from the whole width and lose 2D locality inside a token, so macro-F1 is expected to be lower than with patch tokens."
+
+model:
+  sequence_mode: rows

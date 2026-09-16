@@ -1,0 +1,18 @@
+base: _base.yaml
+
+experiment:
+  name: lstm
+
+model:
+  name: lstm
+  sequence_mode: rows      # timestep t = image row t -> 28 steps, input_size = 1*28
+  patch_size: 4            # only used when sequence_mode = patches
+  hidden_size: 128
+  num_layers: 2
+  dropout: 0.2
+  bidirectional: false
+  head_dropout: 0.2
+
+optim:
+  lr: 0.001
+  weight_decay: 0.0001

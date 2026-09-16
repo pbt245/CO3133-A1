@@ -1,0 +1,24 @@
+base: _base.yaml
+
+experiment:
+  name: transformer
+
+model:
+  name: transformer
+  sequence_mode: patches   # 4x4 non-overlapping patches -> 49 tokens of dim 16 (+1 CLS token)
+  patch_size: 4
+  d_model: 96
+  num_heads: 4
+  depth: 4
+  mlp_ratio: 2.0
+  dropout: 0.1
+  attn_dropout: 0.0
+  pos_encoding: learned    # learned | sinusoidal | none
+  pooling: cls             # cls | mean
+
+optim:
+  lr: 0.001
+  weight_decay: 0.05
+
+scheduler:
+  warmup_epochs: 3

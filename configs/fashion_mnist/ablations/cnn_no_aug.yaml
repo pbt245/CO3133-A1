@@ -1,0 +1,13 @@
+base: ../cnn.yaml
+
+experiment:
+  name: cnn_no_aug
+  group: ablation
+  reference: cnn
+  changed_factor: "augmentation (random crop pad=2 + horizontal flip) -> none"
+  hypothesis: "Convolution + pooling already give approximate translation invariance, so removing augmentation should cause only a small drop in test macro-F1 but a larger train-val gap."
+
+data:
+  augment:
+    random_crop_padding: 0
+    hflip: false
