@@ -1,0 +1,28 @@
+SequenceTransformer(
+  (token_proj): Linear(in_features=16, out_features=96, bias=True)
+  (pos_encoding): Identity()
+  (pos_dropout): Dropout(p=0.1, inplace=False)
+  (blocks): ModuleList(
+    (0-3): 4 x TransformerEncoderBlock(
+      (norm1): LayerNorm((96,), eps=1e-05, elementwise_affine=True, bias=True)
+      (attn): MultiHeadSelfAttention(
+        (qkv): Linear(in_features=96, out_features=288, bias=True)
+        (out_proj): Linear(in_features=96, out_features=96, bias=True)
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (proj_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (norm2): LayerNorm((96,), eps=1e-05, elementwise_affine=True, bias=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=96, out_features=192, bias=True)
+        (1): GELU(approximate='none')
+        (2): Dropout(p=0.1, inplace=False)
+        (3): Linear(in_features=192, out_features=96, bias=True)
+        (4): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (norm): LayerNorm((96,), eps=1e-05, elementwise_affine=True, bias=True)
+  (head): Linear(in_features=96, out_features=10, bias=True)
+)
+
+trainable parameters: 302,026

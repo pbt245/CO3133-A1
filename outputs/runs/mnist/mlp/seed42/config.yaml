@@ -1,0 +1,65 @@
+seed: 42
+deterministic: false
+experiment:
+  name: mlp
+  group: debug
+  reference: null
+  changed_factor: null
+  hypothesis: null
+data:
+  name: mnist
+  raw_root: data/raw
+  split_dir: data/splits
+  split_seed: 42
+  val_fraction: 0.1
+  num_workers: 2
+  augment:
+    random_crop_padding: 2
+    hflip: false
+train:
+  epochs: 3
+  batch_size: 128
+  eval_batch_size: 512
+  label_smoothing: 0.0
+  grad_clip: 1.0
+  amp: true
+  early_stopping_patience: 10
+  checkpoint_metric: val_macro_f1
+  show_progress: true
+optim:
+  name: adamw
+  lr: 0.001
+  weight_decay: 0.0001
+  momentum: 0.9
+scheduler:
+  name: cosine
+  warmup_epochs: 1
+  min_lr_ratio: 0.01
+eval:
+  bootstrap_samples: 1000
+  n_examples: 25
+  inference:
+    batch_size: 256
+    warmup_iters: 10
+    timed_iters: 50
+    latency_samples: 200
+    amp: false
+output:
+  root: outputs/runs
+model:
+  name: mlp
+  hidden_dims:
+  - 512
+  - 256
+  activation: relu
+  dropout: 0.3
+  batch_norm: true
+run:
+  run_id: mnist-mlp-s42-20260922-194759
+  config_file: configs/fashion_mnist/mlp.yaml
+  overrides:
+  - data.name=mnist
+  - data.augment.hflip=false
+  - train.epochs=3
+  - experiment.group=debug
+  started_at: 2026-09-22T19:47:59+0700

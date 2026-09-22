@@ -1,0 +1,29 @@
+{
+  "run_id": "cifar10-gru-s42-20260922-211242",
+  "dataset": "cifar10",
+  "experiment": "gru",
+  "model": "gru",
+  "seed": 42,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 60,
+  "epochs_run": 60,
+  "early_stopped": false,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 57,
+  "best_val_loss": 0.987834335899353,
+  "best_val_acc": 0.7162,
+  "best_val_macro_f1": 0.7160399673568753,
+  "train_time_s": 90.0620730949995,
+  "train_time_per_epoch_s": 1.501034551583325,
+  "wall_time_s": 95.94897256700096,
+  "parameters": {
+    "trainable": 669194,
+    "total": 669194
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/cifar10_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "b99301bfd9655f1c",
+    "val": "280540fcdfde8a41"
+  }
+}

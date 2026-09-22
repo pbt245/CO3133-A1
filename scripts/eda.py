@@ -19,20 +19,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-import matplotlib  # noqa: E402
+import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
-import torch  # noqa: E402
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import torch
 
-from src.data.datasets import build_dataloaders, dataset_info, get_split, load_raw  # noqa: E402
-from src.models.sequence import image_to_sequence  # noqa: E402
-from src.utils.config import apply_overrides, load_config  # noqa: E402
-from src.utils.io import resolve_path, save_json  # noqa: E402
-from src.utils.seed import set_seed  # noqa: E402
-from src.viz.plots import plot_class_distribution, plot_heatmap, plot_image_grid  # noqa: E402
+from src.data.datasets import build_dataloaders, dataset_info, get_split, load_raw
+from src.models.sequence import image_to_sequence
+from src.utils.config import apply_overrides, load_config
+from src.utils.io import resolve_path, save_json
+from src.utils.seed import set_seed
+from src.viz.plots import plot_class_distribution, plot_heatmap, plot_image_grid
 
 SPLITS = ("train", "val", "test")
 

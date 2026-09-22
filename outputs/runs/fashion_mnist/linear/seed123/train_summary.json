@@ -1,0 +1,29 @@
+{
+  "run_id": "fashion_mnist-linear-s123-20260922-195200",
+  "dataset": "fashion_mnist",
+  "experiment": "linear",
+  "model": "linear",
+  "seed": 123,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 40,
+  "epochs_run": 34,
+  "early_stopped": true,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 24,
+  "best_val_loss": 0.6646033794085184,
+  "best_val_acc": 0.7768333333333334,
+  "best_val_macro_f1": 0.7742188975505017,
+  "train_time_s": 32.561294443000406,
+  "train_time_per_epoch_s": 0.9576851306764825,
+  "wall_time_s": 34.79347163999955,
+  "parameters": {
+    "trainable": 7850,
+    "total": 7850
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/fashion_mnist_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "2378c8b39f1d0606",
+    "val": "c3422ec2263f2769"
+  }
+}

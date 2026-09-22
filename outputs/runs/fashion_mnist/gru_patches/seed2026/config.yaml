@@ -1,0 +1,65 @@
+seed: 2026
+deterministic: false
+experiment:
+  name: gru_patches
+  group: ablation
+  reference: gru
+  changed_factor: 'timestep definition: rows (28 steps x 28 dims) -> 4x4 patches in
+    raster order (49 steps x 16 dims)'
+  hypothesis: Patch sequences are longer and each step carries less context, and vertically
+    adjacent patches are 7 steps apart, so the GRU is expected to perform no better
+    than with rows.
+data:
+  name: fashion_mnist
+  raw_root: data/raw
+  split_dir: data/splits
+  split_seed: 42
+  val_fraction: 0.1
+  num_workers: 2
+  augment:
+    random_crop_padding: 2
+    hflip: true
+train:
+  epochs: 40
+  batch_size: 128
+  eval_batch_size: 512
+  label_smoothing: 0.0
+  grad_clip: 1.0
+  amp: true
+  early_stopping_patience: 10
+  checkpoint_metric: val_macro_f1
+  show_progress: true
+optim:
+  name: adamw
+  lr: 0.001
+  weight_decay: 0.0001
+  momentum: 0.9
+scheduler:
+  name: cosine
+  warmup_epochs: 1
+  min_lr_ratio: 0.01
+eval:
+  bootstrap_samples: 1000
+  n_examples: 25
+  inference:
+    batch_size: 256
+    warmup_iters: 10
+    timed_iters: 50
+    latency_samples: 200
+    amp: false
+output:
+  root: outputs/runs
+model:
+  name: gru
+  sequence_mode: patches
+  patch_size: 4
+  hidden_size: 128
+  num_layers: 2
+  dropout: 0.2
+  bidirectional: false
+  head_dropout: 0.2
+run:
+  run_id: fashion_mnist-gru_patches-s2026-20260922-202212
+  config_file: /home/benjamin/Documents/26/DL/CO3133-A1-draft/configs/fashion_mnist/ablations/gru_patches.yaml
+  overrides: []
+  started_at: 2026-09-22T20:22:12+0700

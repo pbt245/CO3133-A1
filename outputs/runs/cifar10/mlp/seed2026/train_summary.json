@@ -1,0 +1,29 @@
+{
+  "run_id": "cifar10-mlp-s2026-20260922-204907",
+  "dataset": "cifar10",
+  "experiment": "mlp",
+  "model": "mlp",
+  "seed": 2026,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 60,
+  "epochs_run": 60,
+  "early_stopped": false,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 52,
+  "best_val_loss": 1.0993890897750855,
+  "best_val_acc": 0.6146,
+  "best_val_macro_f1": 0.6111417840160589,
+  "train_time_s": 65.53955698901336,
+  "train_time_per_epoch_s": 1.0923259498168894,
+  "wall_time_s": 72.01025778599978,
+  "parameters": {
+    "trainable": 3678218,
+    "total": 3678218
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/cifar10_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "b99301bfd9655f1c",
+    "val": "280540fcdfde8a41"
+  }
+}

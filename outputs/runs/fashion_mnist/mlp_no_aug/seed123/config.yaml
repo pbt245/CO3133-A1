@@ -1,0 +1,63 @@
+seed: 123
+deterministic: false
+experiment:
+  name: mlp_no_aug
+  group: ablation
+  reference: mlp
+  changed_factor: augmentation (random crop pad=2 + horizontal flip) -> none
+  hypothesis: An MLP on flattened pixels has no built-in translation invariance, so
+    augmentation acts as a stronger regularizer for it than for the CNN; removing
+    it should widen the train-val gap more than for cnn_no_aug.
+data:
+  name: fashion_mnist
+  raw_root: data/raw
+  split_dir: data/splits
+  split_seed: 42
+  val_fraction: 0.1
+  num_workers: 2
+  augment:
+    random_crop_padding: 0
+    hflip: false
+train:
+  epochs: 40
+  batch_size: 128
+  eval_batch_size: 512
+  label_smoothing: 0.0
+  grad_clip: 1.0
+  amp: true
+  early_stopping_patience: 10
+  checkpoint_metric: val_macro_f1
+  show_progress: true
+optim:
+  name: adamw
+  lr: 0.001
+  weight_decay: 0.0001
+  momentum: 0.9
+scheduler:
+  name: cosine
+  warmup_epochs: 1
+  min_lr_ratio: 0.01
+eval:
+  bootstrap_samples: 1000
+  n_examples: 25
+  inference:
+    batch_size: 256
+    warmup_iters: 10
+    timed_iters: 50
+    latency_samples: 200
+    amp: false
+output:
+  root: outputs/runs
+model:
+  name: mlp
+  hidden_dims:
+  - 512
+  - 256
+  activation: relu
+  dropout: 0.3
+  batch_norm: true
+run:
+  run_id: fashion_mnist-mlp_no_aug-s123-20260922-202418
+  config_file: /home/benjamin/Documents/26/DL/CO3133-A1-draft/configs/fashion_mnist/ablations/mlp_no_aug.yaml
+  overrides: []
+  started_at: 2026-09-22T20:24:18+0700

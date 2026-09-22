@@ -1,0 +1,29 @@
+{
+  "run_id": "fashion_mnist-lstm-s42-20260922-195922",
+  "dataset": "fashion_mnist",
+  "experiment": "lstm",
+  "model": "lstm",
+  "seed": 42,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 40,
+  "epochs_run": 40,
+  "early_stopped": false,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 39,
+  "best_val_loss": 0.2365138740936915,
+  "best_val_acc": 0.9168333333333333,
+  "best_val_macro_f1": 0.9166566884823346,
+  "train_time_s": 50.91269880600339,
+  "train_time_per_epoch_s": 1.2728174701500847,
+  "wall_time_s": 54.34666490800009,
+  "parameters": {
+    "trainable": 214282,
+    "total": 214282
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/fashion_mnist_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "2378c8b39f1d0606",
+    "val": "c3422ec2263f2769"
+  }
+}

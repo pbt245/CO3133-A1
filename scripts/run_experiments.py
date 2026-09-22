@@ -19,8 +19,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.utils.config import load_config  # noqa: E402
-from src.utils.io import resolve_path  # noqa: E402
+from src.utils.config import load_config
+from src.utils.io import resolve_path
 
 MAIN_ORDER = ["linear", "mlp", "cnn", "lstm", "gru", "transformer"]
 

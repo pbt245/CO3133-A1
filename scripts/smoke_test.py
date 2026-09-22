@@ -13,13 +13,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-import torch  # noqa: E402
-import torch.nn as nn  # noqa: E402
+import torch
+import torch.nn as nn
 
-from src.data.datasets import augment_image, dataset_info  # noqa: E402
-from src.models import build_model, count_parameters  # noqa: E402
-from src.models.sequence import image_to_sequence  # noqa: E402
-from src.utils.config import load_config  # noqa: E402
+from src.data.datasets import augment_image, dataset_info
+from src.models import build_model, count_parameters
+from src.models.sequence import image_to_sequence
+from src.utils.config import load_config
 
 
 def check_sequences():

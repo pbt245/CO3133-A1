@@ -1,0 +1,16 @@
+model_a,model_b,seed,acc_a,acc_b,a_right_b_wrong,a_wrong_b_right,statistic,p_value,method
+linear,mlp,42,0.3913,0.616,600,2847,1463.451116913258,0.0,chi2 with continuity correction
+linear,cnn,42,0.3913,0.9165,151,5403,4964.530248469571,0.0,chi2 with continuity correction
+linear,lstm,42,0.3913,0.6862,646,3595,2049.2110351332235,0.0,chi2 with continuity correction
+linear,gru,42,0.3913,0.7122,559,3768,2378.383175410215,0.0,chi2 with continuity correction
+linear,transformer,42,0.3913,0.7939,416,4442,3334.8342939481267,0.0,chi2 with continuity correction
+mlp,cnn,42,0.616,0.9165,208,3213,2637.8298743057585,0.0,chi2 with continuity correction
+mlp,lstm,42,0.616,0.6862,881,1583,199.43222402597402,2.7780124179448958e-45,chi2 with continuity correction
+mlp,gru,42,0.616,0.7122,789,1751,363.59094488188975,4.652395860607894e-81,chi2 with continuity correction
+mlp,transformer,42,0.616,0.7939,563,2342,1088.2216867469879,1.1990750838910219e-238,chi2 with continuity correction
+cnn,lstm,42,0.9165,0.6862,2548,245,1897.3161475116362,0.0,chi2 with continuity correction
+cnn,gru,42,0.9165,0.7122,2297,254,1634.560564484516,0.0,chi2 with continuity correction
+cnn,transformer,42,0.9165,0.7939,1526,300,821.8099671412924,9.778236683139414e-181,chi2 with continuity correction
+lstm,gru,42,0.6862,0.7122,856,1116,34.016734279918865,5.464011549388943e-09,chi2 with continuity correction
+lstm,transformer,42,0.6862,0.7939,697,1774,468.5455281262647,6.641611455777065e-104,chi2 with continuity correction
+gru,transformer,42,0.7122,0.7939,752,1569,286.88323998276604,2.3751036610957698e-64,chi2 with continuity correction

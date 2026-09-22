@@ -1,0 +1,61 @@
+seed: 2026
+deterministic: false
+experiment:
+  name: cnn
+  group: main
+  reference: null
+  changed_factor: null
+  hypothesis: null
+data:
+  name: fashion_mnist
+  raw_root: data/raw
+  split_dir: data/splits
+  split_seed: 42
+  val_fraction: 0.1
+  num_workers: 2
+  augment:
+    random_crop_padding: 2
+    hflip: true
+train:
+  epochs: 40
+  batch_size: 128
+  eval_batch_size: 512
+  label_smoothing: 0.0
+  grad_clip: 1.0
+  amp: true
+  early_stopping_patience: 10
+  checkpoint_metric: val_macro_f1
+  show_progress: true
+optim:
+  name: adamw
+  lr: 0.001
+  weight_decay: 0.0005
+  momentum: 0.9
+scheduler:
+  name: cosine
+  warmup_epochs: 1
+  min_lr_ratio: 0.01
+eval:
+  bootstrap_samples: 1000
+  n_examples: 25
+  inference:
+    batch_size: 256
+    warmup_iters: 10
+    timed_iters: 50
+    latency_samples: 200
+    amp: false
+output:
+  root: outputs/runs
+model:
+  name: cnn
+  channels:
+  - 32
+  - 64
+  - 128
+  block_dropout: 0.1
+  head_dropout: 0.3
+run:
+  run_id: fashion_mnist-cnn-s2026-20260922-195732
+  config_file: /home/benjamin/Documents/26/DL/CO3133-A1-draft/configs/fashion_mnist/cnn.yaml
+  overrides: []
+  started_at: 2026-09-22T19:57:32+0700

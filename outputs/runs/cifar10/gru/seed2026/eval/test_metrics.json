@@ -1,0 +1,180 @@
+{
+  "run_id": "cifar10-gru-s2026-20260922-211614",
+  "dataset": "cifar10",
+  "experiment": "gru",
+  "model": "gru",
+  "seed": 2026,
+  "split": "test",
+  "n_samples": 10000,
+  "loss": 1.0062412391662598,
+  "accuracy": 0.7118,
+  "macro_f1": 0.7105077166847528,
+  "weighted_f1": 0.7105077166847528,
+  "bootstrap_ci": {
+    "accuracy": [
+      0.7036975,
+      0.7204
+    ],
+    "macro_f1": [
+      0.7022944216275303,
+      0.7187563222473282
+    ],
+    "n_boot": 1000,
+    "confidence": 0.95
+  },
+  "per_class": [
+    {
+      "class": "airplane",
+      "precision": 0.7217553688141923,
+      "recall": 0.773,
+      "f1": 0.7464992757122163,
+      "support": 1000
+    },
+    {
+      "class": "automobile",
+      "precision": 0.8261316872427984,
+      "recall": 0.803,
+      "f1": 0.8144016227180527,
+      "support": 1000
+    },
+    {
+      "class": "bird",
+      "precision": 0.6282998944033791,
+      "recall": 0.595,
+      "f1": 0.6111967128916281,
+      "support": 1000
+    },
+    {
+      "class": "cat",
+      "precision": 0.557883131201764,
+      "recall": 0.506,
+      "f1": 0.5306764551651809,
+      "support": 1000
+    },
+    {
+      "class": "deer",
+      "precision": 0.6564729867482161,
+      "recall": 0.644,
+      "f1": 0.6501766784452296,
+      "support": 1000
+    },
+    {
+      "class": "dog",
+      "precision": 0.5946462715105163,
+      "recall": 0.622,
+      "f1": 0.6080156402737048,
+      "support": 1000
+    },
+    {
+      "class": "frog",
+      "precision": 0.7362534948741846,
+      "recall": 0.79,
+      "f1": 0.7621804148576942,
+      "support": 1000
+    },
+    {
+      "class": "horse",
+      "precision": 0.782563025210084,
+      "recall": 0.745,
+      "f1": 0.7633196721311475,
+      "support": 1000
+    },
+    {
+      "class": "ship",
+      "precision": 0.82,
+      "recall": 0.861,
+      "f1": 0.84,
+      "support": 1000
+    },
+    {
+      "class": "truck",
+      "precision": 0.7782217782217782,
+      "recall": 0.779,
+      "f1": 0.7786106946526736,
+      "support": 1000
+    }
+  ],
+  "error_summary": {
+    "n_errors": 2882,
+    "error_rate": 0.2882,
+    "mean_confidence_correct": 0.8988452553749084,
+    "mean_confidence_errors": 0.7048155069351196,
+    "high_confidence_errors_conf_gt_0.9": 675,
+    "top_confusions": [
+      {
+        "true": "cat",
+        "predicted": "dog",
+        "count": 185,
+        "rate_within_true_class": 0.185,
+        "share_of_all_errors": 0.06419153365718251
+      },
+      {
+        "true": "dog",
+        "predicted": "cat",
+        "count": 140,
+        "rate_within_true_class": 0.14,
+        "share_of_all_errors": 0.048577376821651634
+      },
+      {
+        "true": "automobile",
+        "predicted": "truck",
+        "count": 105,
+        "rate_within_true_class": 0.105,
+        "share_of_all_errors": 0.036433032616238724
+      },
+      {
+        "true": "truck",
+        "predicted": "automobile",
+        "count": 88,
+        "rate_within_true_class": 0.088,
+        "share_of_all_errors": 0.030534351145038167
+      },
+      {
+        "true": "bird",
+        "predicted": "deer",
+        "count": 88,
+        "rate_within_true_class": 0.088,
+        "share_of_all_errors": 0.030534351145038167
+      }
+    ]
+  },
+  "parameters": {
+    "trainable": 669194,
+    "total": 669194
+  },
+  "inference": {
+    "device": "cuda",
+    "amp": false,
+    "torch_num_threads": 6,
+    "batch_size": 256,
+    "timed_iters": 50,
+    "throughput_img_per_s": 118121.87401602823,
+    "ms_per_image_batched": 0.00846583249995092,
+    "latency_samples": 200,
+    "latency_ms_bs1_mean": 0.45844168503208493,
+    "latency_ms_bs1_median": 0.39373899926431477,
+    "latency_ms_bs1_p95": 1.078835900443664
+  },
+  "eval_pass_time_s": 0.19039057299960405,
+  "checkpoint": {
+    "file": "checkpoints/best.pt",
+    "epoch": 48,
+    "selection_metric": "val_macro_f1",
+    "val_metrics": {
+      "val_loss": 0.9989758344650268,
+      "val_acc": 0.7092,
+      "val_macro_f1": 0.7092097727144563
+    },
+    "sha256": "90c9dc79ee2fb5a20b3428ca143f13c3a51385a355bfce06f410c87e1288bebb"
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/cifar10_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "b99301bfd9655f1c",
+    "val": "280540fcdfde8a41"
+  },
+  "git_at_eval": {
+    "commit": "4255cd22b2646ade4032fc561812bbcb1670bf90",
+    "dirty": true,
+    "tag": null
+  }
+}

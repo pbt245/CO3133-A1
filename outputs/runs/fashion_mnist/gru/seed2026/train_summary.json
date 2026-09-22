@@ -1,0 +1,29 @@
+{
+  "run_id": "fashion_mnist-gru-s2026-20260922-200411",
+  "dataset": "fashion_mnist",
+  "experiment": "gru",
+  "model": "gru",
+  "seed": 2026,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 40,
+  "epochs_run": 40,
+  "early_stopped": false,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 40,
+  "best_val_loss": 0.2285499368508657,
+  "best_val_acc": 0.9186666666666666,
+  "best_val_macro_f1": 0.9186557812287763,
+  "train_time_s": 46.508555069001886,
+  "train_time_per_epoch_s": 1.1627138767250471,
+  "wall_time_s": 49.425274424000236,
+  "parameters": {
+    "trainable": 161034,
+    "total": 161034
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/fashion_mnist_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "2378c8b39f1d0606",
+    "val": "c3422ec2263f2769"
+  }
+}

@@ -1,0 +1,63 @@
+seed: 123
+deterministic: false
+experiment:
+  name: cnn_no_aug
+  group: ablation
+  reference: cnn
+  changed_factor: augmentation (random crop pad=2 + horizontal flip) -> none
+  hypothesis: Convolution + pooling already give approximate translation invariance,
+    so removing augmentation should cause only a small drop in test macro-F1 but a
+    larger train-val gap.
+data:
+  name: fashion_mnist
+  raw_root: data/raw
+  split_dir: data/splits
+  split_seed: 42
+  val_fraction: 0.1
+  num_workers: 2
+  augment:
+    random_crop_padding: 0
+    hflip: false
+train:
+  epochs: 40
+  batch_size: 128
+  eval_batch_size: 512
+  label_smoothing: 0.0
+  grad_clip: 1.0
+  amp: true
+  early_stopping_patience: 10
+  checkpoint_metric: val_macro_f1
+  show_progress: true
+optim:
+  name: adamw
+  lr: 0.001
+  weight_decay: 0.0005
+  momentum: 0.9
+scheduler:
+  name: cosine
+  warmup_epochs: 1
+  min_lr_ratio: 0.01
+eval:
+  bootstrap_samples: 1000
+  n_examples: 25
+  inference:
+    batch_size: 256
+    warmup_iters: 10
+    timed_iters: 50
+    latency_samples: 200
+    amp: false
+output:
+  root: outputs/runs
+model:
+  name: cnn
+  channels:
+  - 32
+  - 64
+  - 128
+  block_dropout: 0.1
+  head_dropout: 0.3
+run:
+  run_id: fashion_mnist-cnn_no_aug-s123-20260922-201640
+  config_file: /home/benjamin/Documents/26/DL/CO3133-A1-draft/configs/fashion_mnist/ablations/cnn_no_aug.yaml
+  overrides: []
+  started_at: 2026-09-22T20:16:40+0700

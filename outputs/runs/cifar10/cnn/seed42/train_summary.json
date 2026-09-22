@@ -1,0 +1,29 @@
+{
+  "run_id": "cifar10-cnn-s42-20260922-205027",
+  "dataset": "cifar10",
+  "experiment": "cnn",
+  "model": "cnn",
+  "seed": 42,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 60,
+  "epochs_run": 60,
+  "early_stopped": false,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 57,
+  "best_val_loss": 0.3090347646713257,
+  "best_val_acc": 0.9174,
+  "best_val_macro_f1": 0.9171699036739078,
+  "train_time_s": 297.7699422350088,
+  "train_time_per_epoch_s": 4.96283237058348,
+  "wall_time_s": 316.20209978300045,
+  "parameters": {
+    "trainable": 1148874,
+    "total": 1148874
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/cifar10_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "b99301bfd9655f1c",
+    "val": "280540fcdfde8a41"
+  }
+}

@@ -1,0 +1,55 @@
+seed: 123
+deterministic: false
+experiment:
+  name: linear
+  group: main
+  reference: null
+  changed_factor: null
+  hypothesis: null
+data:
+  name: cifar10
+  raw_root: data/raw
+  split_dir: data/splits
+  split_seed: 42
+  val_fraction: 0.1
+  num_workers: 2
+  augment:
+    random_crop_padding: 4
+    hflip: true
+train:
+  epochs: 60
+  batch_size: 128
+  eval_batch_size: 512
+  label_smoothing: 0.0
+  grad_clip: 1.0
+  amp: true
+  early_stopping_patience: 15
+  checkpoint_metric: val_macro_f1
+  show_progress: true
+optim:
+  name: adamw
+  lr: 0.001
+  weight_decay: 0.0
+  momentum: 0.9
+scheduler:
+  name: cosine
+  warmup_epochs: 1
+  min_lr_ratio: 0.01
+eval:
+  bootstrap_samples: 1000
+  n_examples: 25
+  inference:
+    batch_size: 256
+    warmup_iters: 10
+    timed_iters: 50
+    latency_samples: 200
+    amp: false
+output:
+  root: outputs/runs
+model:
+  name: linear
+run:
+  run_id: cifar10-linear-s123-20260922-204402
+  config_file: /home/benjamin/Documents/26/DL/CO3133-A1-draft/configs/cifar10/linear.yaml
+  overrides: []
+  started_at: 2026-09-22T20:44:02+0700

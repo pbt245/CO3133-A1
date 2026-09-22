@@ -1,0 +1,180 @@
+{
+  "run_id": "mnist-mlp-s42-20260922-194759",
+  "dataset": "mnist",
+  "experiment": "mlp",
+  "model": "mlp",
+  "seed": 42,
+  "split": "test",
+  "n_samples": 10000,
+  "loss": 0.06917920067310333,
+  "accuracy": 0.9781,
+  "macro_f1": 0.9779657958050105,
+  "weighted_f1": 0.9780711211121025,
+  "bootstrap_ci": {
+    "accuracy": [
+      0.9753,
+      0.9811
+    ],
+    "macro_f1": [
+      0.9751629765692968,
+      0.9809246710628851
+    ],
+    "n_boot": 1000,
+    "confidence": 0.95
+  },
+  "per_class": [
+    {
+      "class": "0",
+      "precision": 0.9768844221105528,
+      "recall": 0.9918367346938776,
+      "f1": 0.9843037974683544,
+      "support": 980
+    },
+    {
+      "class": "1",
+      "precision": 0.9851657940663177,
+      "recall": 0.9947136563876652,
+      "f1": 0.9899167032003507,
+      "support": 1135
+    },
+    {
+      "class": "2",
+      "precision": 0.9759152215799615,
+      "recall": 0.9815891472868217,
+      "f1": 0.978743961352657,
+      "support": 1032
+    },
+    {
+      "class": "3",
+      "precision": 0.9703264094955489,
+      "recall": 0.9712871287128713,
+      "f1": 0.9708065314200891,
+      "support": 1010
+    },
+    {
+      "class": "4",
+      "precision": 0.977710233029382,
+      "recall": 0.9826883910386965,
+      "f1": 0.9801929913661758,
+      "support": 982
+    },
+    {
+      "class": "5",
+      "precision": 0.9829931972789115,
+      "recall": 0.9719730941704036,
+      "f1": 0.9774520856820744,
+      "support": 892
+    },
+    {
+      "class": "6",
+      "precision": 0.9843096234309623,
+      "recall": 0.9822546972860126,
+      "f1": 0.9832810867293625,
+      "support": 958
+    },
+    {
+      "class": "7",
+      "precision": 0.9765625,
+      "recall": 0.9727626459143969,
+      "f1": 0.9746588693957114,
+      "support": 1028
+    },
+    {
+      "class": "8",
+      "precision": 0.9754098360655737,
+      "recall": 0.9774127310061602,
+      "f1": 0.9764102564102564,
+      "support": 974
+    },
+    {
+      "class": "9",
+      "precision": 0.9756345177664975,
+      "recall": 0.9524281466798811,
+      "f1": 0.9638916750250752,
+      "support": 1009
+    }
+  ],
+  "error_summary": {
+    "n_errors": 219,
+    "error_rate": 0.0219,
+    "mean_confidence_correct": 0.9773983955383301,
+    "mean_confidence_errors": 0.666473388671875,
+    "high_confidence_errors_conf_gt_0.9": 30,
+    "top_confusions": [
+      {
+        "true": "5",
+        "predicted": "3",
+        "count": 12,
+        "rate_within_true_class": 0.013452914798206279,
+        "share_of_all_errors": 0.0547945205479452
+      },
+      {
+        "true": "9",
+        "predicted": "3",
+        "count": 12,
+        "rate_within_true_class": 0.011892963330029732,
+        "share_of_all_errors": 0.0547945205479452
+      },
+      {
+        "true": "7",
+        "predicted": "2",
+        "count": 11,
+        "rate_within_true_class": 0.010700389105058366,
+        "share_of_all_errors": 0.0502283105022831
+      },
+      {
+        "true": "9",
+        "predicted": "4",
+        "count": 11,
+        "rate_within_true_class": 0.010901883052527254,
+        "share_of_all_errors": 0.0502283105022831
+      },
+      {
+        "true": "4",
+        "predicted": "9",
+        "count": 9,
+        "rate_within_true_class": 0.009164969450101833,
+        "share_of_all_errors": 0.0410958904109589
+      }
+    ]
+  },
+  "parameters": {
+    "trainable": 536586,
+    "total": 536586
+  },
+  "inference": {
+    "device": "cuda",
+    "amp": false,
+    "torch_num_threads": 6,
+    "batch_size": 256,
+    "timed_iters": 50,
+    "throughput_img_per_s": 2499267.7929294873,
+    "ms_per_image_batched": 0.0004001171874534748,
+    "latency_samples": 200,
+    "latency_ms_bs1_mean": 0.083824705011466,
+    "latency_ms_bs1_median": 0.08273449975604308,
+    "latency_ms_bs1_p95": 0.08766354962972399
+  },
+  "eval_pass_time_s": 0.11846901500030071,
+  "checkpoint": {
+    "file": "checkpoints/best.pt",
+    "epoch": 3,
+    "selection_metric": "val_macro_f1",
+    "val_metrics": {
+      "val_loss": 0.08416699983676275,
+      "val_acc": 0.976,
+      "val_macro_f1": 0.9759272323442699
+    },
+    "sha256": "244e2b929afaab4e0236396f5a3cd6281d1908ce45339aba257b781506a419ba"
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/mnist_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "cfb267f780503e97",
+    "val": "0dd284b31e5cc357"
+  },
+  "git_at_eval": {
+    "commit": "4255cd22b2646ade4032fc561812bbcb1670bf90",
+    "dirty": true,
+    "tag": null
+  }
+}

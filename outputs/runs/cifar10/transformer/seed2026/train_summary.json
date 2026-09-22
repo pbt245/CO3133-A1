@@ -1,0 +1,29 @@
+{
+  "run_id": "cifar10-transformer-s2026-20260922-213150",
+  "dataset": "cifar10",
+  "experiment": "transformer",
+  "model": "transformer",
+  "seed": 2026,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 60,
+  "epochs_run": 60,
+  "early_stopped": false,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 59,
+  "best_val_loss": 0.6351465154647827,
+  "best_val_acc": 0.798,
+  "best_val_macro_f1": 0.7970627860847018,
+  "train_time_s": 368.2396133250004,
+  "train_time_per_epoch_s": 6.137326888750007,
+  "wall_time_s": 389.10563626800104,
+  "parameters": {
+    "trainable": 811146,
+    "total": 811146
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/cifar10_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "b99301bfd9655f1c",
+    "val": "280540fcdfde8a41"
+  }
+}

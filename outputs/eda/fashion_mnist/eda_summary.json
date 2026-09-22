@@ -1,0 +1,174 @@
+{
+  "dataset": "fashion_mnist",
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/fashion_mnist_split42_val0.1.json",
+  "split_sizes": {
+    "train": 54000,
+    "val": 6000,
+    "test": 10000
+  },
+  "imbalance": {
+    "train": {
+      "min_count": 5400,
+      "min_class": "T-shirt/top",
+      "max_count": 5400,
+      "max_class": "T-shirt/top",
+      "max_min_ratio": 1.0,
+      "coef_variation": 0.0,
+      "normalized_entropy": 0.9999999999999998
+    },
+    "val": {
+      "min_count": 600,
+      "min_class": "T-shirt/top",
+      "max_count": 600,
+      "max_class": "T-shirt/top",
+      "max_min_ratio": 1.0,
+      "coef_variation": 0.0,
+      "normalized_entropy": 0.9999999999999998
+    },
+    "test": {
+      "min_count": 1000,
+      "min_class": "T-shirt/top",
+      "max_count": 1000,
+      "max_class": "T-shirt/top",
+      "max_min_ratio": 1.0,
+      "coef_variation": 0.0,
+      "normalized_entropy": 0.9999999999999998
+    }
+  },
+  "stratification_check": {
+    "max_abs_class_pct_diff_train_vs_val": 0.0,
+    "max_abs_class_pct_diff_train_vs_test": 0.0
+  },
+  "input": {
+    "raw_shape_per_image": [
+      1,
+      28,
+      28
+    ],
+    "raw_dtype": "uint8",
+    "raw_value_range_train": [
+      0,
+      255
+    ],
+    "flattened_dim": 784,
+    "sequence_views": {
+      "rows": [
+        28,
+        28
+      ],
+      "cols": [
+        28,
+        28
+      ],
+      "patches_4x4": [
+        49,
+        16
+      ]
+    },
+    "split": {
+      "split_seed": 42,
+      "val_fraction": 0.1,
+      "stratified": true,
+      "protocol": "official train set -> stratified train/val; official test set -> test",
+      "fingerprints": {
+        "train": "2378c8b39f1d0606",
+        "val": "c3422ec2263f2769"
+      }
+    },
+    "normalization_train_only": {
+      "mean": [
+        0.2862090077697746
+      ],
+      "std": [
+        0.3531597432932429
+      ],
+      "computed_on": "train split only, pixels scaled to [0,1]"
+    }
+  },
+  "pixels": {
+    "zero_pixel_fraction_train": 0.5021429988662132
+  },
+  "most_similar_class_means": [
+    {
+      "class_a": "Coat",
+      "class_b": "Shirt",
+      "corr": 0.9665967768658037
+    },
+    {
+      "class_a": "Pullover",
+      "class_b": "Coat",
+      "corr": 0.957572920752042
+    },
+    {
+      "class_a": "Pullover",
+      "class_b": "Shirt",
+      "corr": 0.9474037943295224
+    },
+    {
+      "class_a": "Trouser",
+      "class_b": "Dress",
+      "corr": 0.8785298897448108
+    },
+    {
+      "class_a": "Sandal",
+      "class_b": "Sneaker",
+      "corr": 0.8760016530403668
+    }
+  ],
+  "duplicates": {
+    "official_train": {
+      "n_images": 60000,
+      "n_unique": 60000,
+      "duplicate_groups": 0,
+      "images_in_duplicate_groups": 0,
+      "label_conflicting_groups": 0
+    },
+    "official_test": {
+      "n_images": 10000,
+      "n_unique": 10000,
+      "duplicate_groups": 0,
+      "images_in_duplicate_groups": 0,
+      "label_conflicting_groups": 0
+    },
+    "val_images_identical_to_a_train_image": 0,
+    "test_images_identical_to_a_train_image": 0
+  },
+  "preprocessed_batch": {
+    "x_shape": [
+      128,
+      1,
+      28,
+      28
+    ],
+    "x_dtype": "float32",
+    "y_shape": [
+      128
+    ],
+    "y_dtype": "int64",
+    "x_min": -0.8104236721992493,
+    "x_max": 2.021156072616577,
+    "x_mean": 0.009468985721468925,
+    "x_std": 1.015068531036377,
+    "augmentation_train": {
+      "random_crop_padding": 2,
+      "hflip": true
+    },
+    "sequence_shapes": {
+      "rows": [
+        128,
+        28,
+        28
+      ],
+      "cols": [
+        128,
+        28,
+        28
+      ],
+      "patches_4x4": [
+        128,
+        49,
+        16
+      ]
+    }
+  }
+}

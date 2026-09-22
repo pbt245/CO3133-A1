@@ -1,0 +1,29 @@
+{
+  "run_id": "cifar10-linear-s2026-20260922-204515",
+  "dataset": "cifar10",
+  "experiment": "linear",
+  "model": "linear",
+  "seed": 2026,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 60,
+  "epochs_run": 60,
+  "early_stopped": false,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 55,
+  "best_val_loss": 1.7718889673233031,
+  "best_val_acc": 0.3996,
+  "best_val_macro_f1": 0.39034675812216746,
+  "train_time_s": 58.52854903599473,
+  "train_time_per_epoch_s": 0.9754758172665788,
+  "wall_time_s": 63.84807246800119,
+  "parameters": {
+    "trainable": 30730,
+    "total": 30730
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/cifar10_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "b99301bfd9655f1c",
+    "val": "280540fcdfde8a41"
+  }
+}

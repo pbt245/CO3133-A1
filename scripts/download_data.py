@@ -11,10 +11,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-import numpy as np  # noqa: E402
+import numpy as np
 
-from src.data.datasets import DATASET_INFO, dataset_info, load_raw  # noqa: E402
-from src.utils.io import resolve_path  # noqa: E402
+from src.data.datasets import DATASET_INFO, dataset_info, load_raw
+from src.utils.io import resolve_path
 
 
 def main():

@@ -19,12 +19,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.engine.evaluate import evaluate_run  # noqa: E402
-from src.engine.trainer import run_training  # noqa: E402
-from src.utils.config import apply_overrides, load_config, save_config  # noqa: E402
-from src.utils.env import environment_info, git_info, resolve_device  # noqa: E402
-from src.utils.io import resolve_path, save_json  # noqa: E402
-from src.utils.logger import get_logger  # noqa: E402
+from src.engine.evaluate import evaluate_run
+from src.engine.trainer import run_training
+from src.utils.config import apply_overrides, load_config, save_config
+from src.utils.env import environment_info, git_info, resolve_device
+from src.utils.io import resolve_path, save_json
+from src.utils.logger import get_logger
 
 
 def parse_args():

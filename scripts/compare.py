@@ -20,17 +20,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-import matplotlib  # noqa: E402
+import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 
-from src.engine.metrics import mcnemar_test  # noqa: E402
-from src.utils.config import load_config  # noqa: E402
-from src.utils.io import load_json, resolve_path  # noqa: E402
-from src.viz.plots import plot_heatmap  # noqa: E402
+from src.engine.metrics import mcnemar_test
+from src.utils.config import load_config
+from src.utils.io import load_json, resolve_path
+from src.viz.plots import plot_heatmap
 
 MAIN_ORDER = ["linear", "mlp", "cnn", "lstm", "gru", "transformer"]
 METRICS = ["test_accuracy", "test_macro_f1", "test_loss", "params", "best_epoch", "epochs_run",
@@ -208,7 +208,7 @@ def main():
           "## Main models", "", md_table(SUMMARY_HEADERS, summary_rows(agg[agg.group == "main"]))]
     if not abl.empty:
         md += ["", "## Ablations", "", md_table(SUMMARY_HEADERS, summary_rows(abl))]
-    dirty = df[df.dirty == True]  # noqa: E712
+    dirty = df[df.dirty == True]
     md += ["", "## Traceability", "",
            f"Commits used: {sorted(set(c for c in df.commit if c))}",
            f"Runs with uncommitted changes: {len(dirty)}",

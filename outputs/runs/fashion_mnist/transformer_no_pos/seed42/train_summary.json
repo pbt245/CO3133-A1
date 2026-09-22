@@ -1,0 +1,29 @@
+{
+  "run_id": "fashion_mnist-transformer_no_pos-s42-20260922-202550",
+  "dataset": "fashion_mnist",
+  "experiment": "transformer_no_pos",
+  "model": "transformer",
+  "seed": 42,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 40,
+  "epochs_run": 40,
+  "early_stopped": false,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 34,
+  "best_val_loss": 0.47660108884175617,
+  "best_val_acc": 0.8316666666666667,
+  "best_val_macro_f1": 0.8316688485590321,
+  "train_time_s": 139.20078328900127,
+  "train_time_per_epoch_s": 3.4800195822250317,
+  "wall_time_s": 147.693568364999,
+  "parameters": {
+    "trainable": 302026,
+    "total": 302026
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/fashion_mnist_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "2378c8b39f1d0606",
+    "val": "c3422ec2263f2769"
+  }
+}

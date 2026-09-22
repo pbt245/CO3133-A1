@@ -1,0 +1,10 @@
+2026-09-22 19:47:59 | INFO | Run mnist-mlp-s42-20260922-194759 | device cuda | torch 2.14.0+cu126 | git {'commit': '4255cd22b2646ade4032fc561812bbcb1670bf90', 'dirty': True, 'tag': None}
+2026-09-22 19:47:59 | WARNING | Uncommitted changes present: commit before final runs for traceability.
+2026-09-22 19:47:59 | INFO | Dataset mnist | split /home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/mnist_split42_val0.1.json | train/val/test = 54000/6000/10000 | fingerprints {'train': 'cfb267f780503e97', 'val': '0dd284b31e5cc357'}
+2026-09-22 19:47:59 | INFO | Model mlp | trainable parameters: 536,586
+2026-09-22 19:48:02 | INFO | epoch   1 | lr 2.38e-06 | train loss 0.8309 acc 0.7456 | val loss 0.1798 acc 0.9455 macroF1 0.9451 | 3.3s  *best*
+2026-09-22 19:48:03 | INFO | epoch   2 | lr 1.00e-03 | train loss 0.2498 acc 0.9230 | val loss 0.0994 acc 0.9713 macroF1 0.9712 | 0.8s  *best*
+2026-09-22 19:48:04 | INFO | epoch   3 | lr 5.05e-04 | train loss 0.1762 acc 0.9447 | val loss 0.0842 acc 0.9760 macroF1 0.9759 | 0.8s  *best*
+2026-09-22 19:48:05 | INFO | Best epoch 3 | val macroF1 0.9759 | val acc 0.9760 | train time 4.9s
+2026-09-22 19:48:07 | INFO | [test] acc 0.9781 (95% CI 0.9753-0.9811) | macroF1 0.9780 (95% CI 0.9752-0.9809) | throughput 2499268 img/s | latency bs1 0.08 ms
+2026-09-22 19:48:07 | INFO | Done: /home/benjamin/Documents/26/DL/CO3133-A1-draft/outputs/runs/mnist/mlp/seed42

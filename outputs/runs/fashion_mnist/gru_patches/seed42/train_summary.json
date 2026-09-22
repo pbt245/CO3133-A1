@@ -1,0 +1,29 @@
+{
+  "run_id": "fashion_mnist-gru_patches-s42-20260922-202005",
+  "dataset": "fashion_mnist",
+  "experiment": "gru_patches",
+  "model": "gru",
+  "seed": 42,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 40,
+  "epochs_run": 40,
+  "early_stopped": false,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 34,
+  "best_val_loss": 0.25443283247947696,
+  "best_val_acc": 0.9083333333333333,
+  "best_val_macro_f1": 0.9084212649575308,
+  "train_time_s": 53.370504854999126,
+  "train_time_per_epoch_s": 1.3342626213749782,
+  "wall_time_s": 56.737014356000145,
+  "parameters": {
+    "trainable": 156426,
+    "total": 156426
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/fashion_mnist_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "2378c8b39f1d0606",
+    "val": "c3422ec2263f2769"
+  }
+}

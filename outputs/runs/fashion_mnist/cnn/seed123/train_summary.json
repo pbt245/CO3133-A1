@@ -1,0 +1,29 @@
+{
+  "run_id": "fashion_mnist-cnn-s123-20260922-195548",
+  "dataset": "fashion_mnist",
+  "experiment": "cnn",
+  "model": "cnn",
+  "seed": 123,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 40,
+  "epochs_run": 40,
+  "early_stopped": false,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 37,
+  "best_val_loss": 0.14365641260147094,
+  "best_val_acc": 0.9491666666666667,
+  "best_val_macro_f1": 0.9492685363944855,
+  "train_time_s": 92.16484261400001,
+  "train_time_per_epoch_s": 2.3041210653500004,
+  "wall_time_s": 97.06633518200033,
+  "parameters": {
+    "trainable": 288170,
+    "total": 288170
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/fashion_mnist_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "2378c8b39f1d0606",
+    "val": "c3422ec2263f2769"
+  }
+}

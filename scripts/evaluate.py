@@ -10,9 +10,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.engine.evaluate import evaluate_run  # noqa: E402
-from src.utils.env import resolve_device  # noqa: E402
-from src.utils.io import resolve_path  # noqa: E402
+from src.engine.evaluate import evaluate_run
+from src.utils.env import resolve_device
+from src.utils.io import resolve_path
 
 
 def main():

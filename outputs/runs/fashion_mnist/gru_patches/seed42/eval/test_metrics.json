@@ -1,0 +1,180 @@
+{
+  "run_id": "fashion_mnist-gru_patches-s42-20260922-202005",
+  "dataset": "fashion_mnist",
+  "experiment": "gru_patches",
+  "model": "gru",
+  "seed": 42,
+  "split": "test",
+  "n_samples": 10000,
+  "loss": 0.27854162228107454,
+  "accuracy": 0.8987,
+  "macro_f1": 0.898730467670281,
+  "weighted_f1": 0.898730467670281,
+  "bootstrap_ci": {
+    "accuracy": [
+      0.8921,
+      0.9047
+    ],
+    "macro_f1": [
+      0.892500404807148,
+      0.9042803699237923
+    ],
+    "n_boot": 1000,
+    "confidence": 0.95
+  },
+  "per_class": [
+    {
+      "class": "T-shirt/top",
+      "precision": 0.8479355488418933,
+      "recall": 0.842,
+      "f1": 0.8449573507275464,
+      "support": 1000
+    },
+    {
+      "class": "Trouser",
+      "precision": 0.9919110212335692,
+      "recall": 0.981,
+      "f1": 0.9864253393665159,
+      "support": 1000
+    },
+    {
+      "class": "Pullover",
+      "precision": 0.838974358974359,
+      "recall": 0.818,
+      "f1": 0.8283544303797469,
+      "support": 1000
+    },
+    {
+      "class": "Dress",
+      "precision": 0.9085427135678392,
+      "recall": 0.904,
+      "f1": 0.906265664160401,
+      "support": 1000
+    },
+    {
+      "class": "Coat",
+      "precision": 0.8253189401373896,
+      "recall": 0.841,
+      "f1": 0.83308568598316,
+      "support": 1000
+    },
+    {
+      "class": "Sandal",
+      "precision": 0.9825641025641025,
+      "recall": 0.958,
+      "f1": 0.970126582278481,
+      "support": 1000
+    },
+    {
+      "class": "Shirt",
+      "precision": 0.7232142857142857,
+      "recall": 0.729,
+      "f1": 0.7260956175298805,
+      "support": 1000
+    },
+    {
+      "class": "Sneaker",
+      "precision": 0.9302769818529131,
+      "recall": 0.974,
+      "f1": 0.9516365412799218,
+      "support": 1000
+    },
+    {
+      "class": "Bag",
+      "precision": 0.9733464955577492,
+      "recall": 0.986,
+      "f1": 0.979632389468455,
+      "support": 1000
+    },
+    {
+      "class": "Ankle boot",
+      "precision": 0.9675456389452333,
+      "recall": 0.954,
+      "f1": 0.9607250755287009,
+      "support": 1000
+    }
+  ],
+  "error_summary": {
+    "n_errors": 1013,
+    "error_rate": 0.1013,
+    "mean_confidence_correct": 0.9359912872314453,
+    "mean_confidence_errors": 0.6808465123176575,
+    "high_confidence_errors_conf_gt_0.9": 143,
+    "top_confusions": [
+      {
+        "true": "Shirt",
+        "predicted": "T-shirt/top",
+        "count": 116,
+        "rate_within_true_class": 0.116,
+        "share_of_all_errors": 0.11451135241855874
+      },
+      {
+        "true": "T-shirt/top",
+        "predicted": "Shirt",
+        "count": 112,
+        "rate_within_true_class": 0.112,
+        "share_of_all_errors": 0.11056268509378085
+      },
+      {
+        "true": "Pullover",
+        "predicted": "Coat",
+        "count": 79,
+        "rate_within_true_class": 0.079,
+        "share_of_all_errors": 0.07798617966436328
+      },
+      {
+        "true": "Pullover",
+        "predicted": "Shirt",
+        "count": 74,
+        "rate_within_true_class": 0.074,
+        "share_of_all_errors": 0.07305034550839092
+      },
+      {
+        "true": "Coat",
+        "predicted": "Pullover",
+        "count": 74,
+        "rate_within_true_class": 0.074,
+        "share_of_all_errors": 0.07305034550839092
+      }
+    ]
+  },
+  "parameters": {
+    "trainable": 156426,
+    "total": 156426
+  },
+  "inference": {
+    "device": "cuda",
+    "amp": false,
+    "torch_num_threads": 6,
+    "batch_size": 256,
+    "timed_iters": 50,
+    "throughput_img_per_s": 128037.14101421647,
+    "ms_per_image_batched": 0.007810233749978579,
+    "latency_samples": 200,
+    "latency_ms_bs1_mean": 0.232382560006954,
+    "latency_ms_bs1_median": 0.20103599990761722,
+    "latency_ms_bs1_p95": 0.3901134506122614
+  },
+  "eval_pass_time_s": 0.15360559800046758,
+  "checkpoint": {
+    "file": "checkpoints/best.pt",
+    "epoch": 34,
+    "selection_metric": "val_macro_f1",
+    "val_metrics": {
+      "val_loss": 0.25443283247947696,
+      "val_acc": 0.9083333333333333,
+      "val_macro_f1": 0.9084212649575308
+    },
+    "sha256": "ada0020040d30466bfe30e0ecc41849a3b979dd706e0db5a35bec61c601eb5a6"
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/fashion_mnist_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "2378c8b39f1d0606",
+    "val": "c3422ec2263f2769"
+  },
+  "git_at_eval": {
+    "commit": "4255cd22b2646ade4032fc561812bbcb1670bf90",
+    "dirty": true,
+    "tag": null
+  }
+}

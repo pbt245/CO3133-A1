@@ -16,21 +16,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-import matplotlib  # noqa: E402
+import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
-import torch  # noqa: E402
-import torch.nn as nn  # noqa: E402
-from torch.utils.data import DataLoader  # noqa: E402
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader
 
-from src.engine.evaluate import load_run  # noqa: E402
-from src.models.sequence import patch_grid  # noqa: E402
-from src.utils.env import resolve_device  # noqa: E402
-from src.utils.io import resolve_path  # noqa: E402
-from src.viz.plots import show_image  # noqa: E402
+from src.engine.evaluate import load_run
+from src.models.sequence import patch_grid
+from src.utils.env import resolve_device
+from src.utils.io import resolve_path
+from src.viz.plots import show_image
 
 
 def save(fig, path):

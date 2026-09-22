@@ -1,0 +1,67 @@
+2026-09-22 20:50:27 | INFO | Run cifar10-cnn-s42-20260922-205027 | device cuda | torch 2.14.0+cu126 | git {'commit': '4255cd22b2646ade4032fc561812bbcb1670bf90', 'dirty': True, 'tag': None}
+2026-09-22 20:50:27 | WARNING | Uncommitted changes present: commit before final runs for traceability.
+2026-09-22 20:50:28 | INFO | Dataset cifar10 | split /home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/cifar10_split42_val0.1.json | train/val/test = 45000/5000/10000 | fingerprints {'train': 'b99301bfd9655f1c', 'val': '280540fcdfde8a41'}
+2026-09-22 20:50:28 | INFO | Model cnn | trainable parameters: 1,148,874
+2026-09-22 20:50:36 | INFO | epoch   1 | lr 2.85e-06 | train loss 1.6539 acc 0.3899 | val loss 1.2739 acc 0.5186 macroF1 0.5141 | 7.3s  *best*
+2026-09-22 20:50:41 | INFO | epoch   2 | lr 1.00e-03 | train loss 1.1733 acc 0.5786 | val loss 1.1157 acc 0.6132 macroF1 0.6194 | 4.9s  *best*
+2026-09-22 20:50:46 | INFO | epoch   3 | lr 9.99e-04 | train loss 0.9807 acc 0.6510 | val loss 0.8287 acc 0.7154 macroF1 0.7108 | 4.9s  *best*
+2026-09-22 20:50:51 | INFO | epoch   4 | lr 9.97e-04 | train loss 0.8553 acc 0.7009 | val loss 0.7186 acc 0.7482 macroF1 0.7472 | 4.8s  *best*
+2026-09-22 20:50:56 | INFO | epoch   5 | lr 9.94e-04 | train loss 0.7650 acc 0.7332 | val loss 0.6290 acc 0.7828 macroF1 0.7825 | 4.6s  *best*
+2026-09-22 20:51:01 | INFO | epoch   6 | lr 9.89e-04 | train loss 0.6967 acc 0.7620 | val loss 0.5554 acc 0.8098 macroF1 0.8085 | 4.6s  *best*
+2026-09-22 20:51:06 | INFO | epoch   7 | lr 9.83e-04 | train loss 0.6384 acc 0.7808 | val loss 0.6046 acc 0.7928 macroF1 0.7880 | 4.9s
+2026-09-22 20:51:11 | INFO | epoch   8 | lr 9.75e-04 | train loss 0.5931 acc 0.7967 | val loss 0.5308 acc 0.8190 macroF1 0.8192 | 4.9s  *best*
+2026-09-22 20:51:17 | INFO | epoch   9 | lr 9.66e-04 | train loss 0.5496 acc 0.8103 | val loss 0.4857 acc 0.8360 macroF1 0.8375 | 4.8s  *best*
+2026-09-22 20:51:22 | INFO | epoch  10 | lr 9.56e-04 | train loss 0.5172 acc 0.8225 | val loss 0.4605 acc 0.8476 macroF1 0.8468 | 4.8s  *best*
+2026-09-22 20:51:27 | INFO | epoch  11 | lr 9.44e-04 | train loss 0.4892 acc 0.8338 | val loss 0.4249 acc 0.8524 macroF1 0.8520 | 4.8s  *best*
+2026-09-22 20:51:32 | INFO | epoch  12 | lr 9.31e-04 | train loss 0.4575 acc 0.8438 | val loss 0.4445 acc 0.8462 macroF1 0.8460 | 4.9s
+2026-09-22 20:51:37 | INFO | epoch  13 | lr 9.17e-04 | train loss 0.4304 acc 0.8525 | val loss 0.3822 acc 0.8684 macroF1 0.8677 | 4.9s  *best*
+2026-09-22 20:51:42 | INFO | epoch  14 | lr 9.02e-04 | train loss 0.4128 acc 0.8585 | val loss 0.3924 acc 0.8662 macroF1 0.8658 | 4.9s
+2026-09-22 20:51:48 | INFO | epoch  15 | lr 8.86e-04 | train loss 0.3938 acc 0.8644 | val loss 0.3857 acc 0.8708 macroF1 0.8704 | 4.7s  *best*
+2026-09-22 20:51:52 | INFO | epoch  16 | lr 8.69e-04 | train loss 0.3777 acc 0.8710 | val loss 0.4464 acc 0.8568 macroF1 0.8559 | 4.5s
+2026-09-22 20:51:57 | INFO | epoch  17 | lr 8.50e-04 | train loss 0.3598 acc 0.8772 | val loss 0.3558 acc 0.8796 macroF1 0.8796 | 4.5s  *best*
+2026-09-22 20:52:02 | INFO | epoch  18 | lr 8.31e-04 | train loss 0.3392 acc 0.8838 | val loss 0.3638 acc 0.8814 macroF1 0.8807 | 4.6s  *best*
+2026-09-22 20:52:07 | INFO | epoch  19 | lr 8.11e-04 | train loss 0.3262 acc 0.8876 | val loss 0.3406 acc 0.8894 macroF1 0.8893 | 4.6s  *best*
+2026-09-22 20:52:12 | INFO | epoch  20 | lr 7.90e-04 | train loss 0.3127 acc 0.8916 | val loss 0.3488 acc 0.8910 macroF1 0.8914 | 4.7s  *best*
+2026-09-22 20:52:17 | INFO | epoch  21 | lr 7.68e-04 | train loss 0.3013 acc 0.8972 | val loss 0.3372 acc 0.8932 macroF1 0.8935 | 5.0s  *best*
+2026-09-22 20:52:23 | INFO | epoch  22 | lr 7.45e-04 | train loss 0.2958 acc 0.8972 | val loss 0.3259 acc 0.8982 macroF1 0.8981 | 5.0s  *best*
+2026-09-22 20:52:28 | INFO | epoch  23 | lr 7.21e-04 | train loss 0.2796 acc 0.9028 | val loss 0.3263 acc 0.8976 macroF1 0.8966 | 4.9s
+2026-09-22 20:52:33 | INFO | epoch  24 | lr 6.97e-04 | train loss 0.2681 acc 0.9082 | val loss 0.3259 acc 0.8956 macroF1 0.8955 | 4.9s
+2026-09-22 20:52:38 | INFO | epoch  25 | lr 6.73e-04 | train loss 0.2607 acc 0.9108 | val loss 0.3374 acc 0.8958 macroF1 0.8958 | 4.8s
+2026-09-22 20:52:43 | INFO | epoch  26 | lr 6.48e-04 | train loss 0.2417 acc 0.9158 | val loss 0.3233 acc 0.8938 macroF1 0.8935 | 4.9s
+2026-09-22 20:52:49 | INFO | epoch  27 | lr 6.22e-04 | train loss 0.2349 acc 0.9197 | val loss 0.3051 acc 0.9034 macroF1 0.9037 | 5.0s  *best*
+2026-09-22 20:52:54 | INFO | epoch  28 | lr 5.97e-04 | train loss 0.2265 acc 0.9216 | val loss 0.3181 acc 0.9034 macroF1 0.9032 | 4.9s
+2026-09-22 20:52:59 | INFO | epoch  29 | lr 5.71e-04 | train loss 0.2213 acc 0.9223 | val loss 0.3075 acc 0.9022 macroF1 0.9019 | 4.7s
+2026-09-22 20:53:04 | INFO | epoch  30 | lr 5.44e-04 | train loss 0.2076 acc 0.9273 | val loss 0.3185 acc 0.9018 macroF1 0.9018 | 4.9s
+2026-09-22 20:53:09 | INFO | epoch  31 | lr 5.18e-04 | train loss 0.1982 acc 0.9304 | val loss 0.3339 acc 0.9006 macroF1 0.9009 | 4.7s
+2026-09-22 20:53:14 | INFO | epoch  32 | lr 4.92e-04 | train loss 0.1914 acc 0.9333 | val loss 0.3089 acc 0.9034 macroF1 0.9036 | 4.6s
+2026-09-22 20:53:19 | INFO | epoch  33 | lr 4.66e-04 | train loss 0.1853 acc 0.9335 | val loss 0.3087 acc 0.9060 macroF1 0.9060 | 4.6s  *best*
+2026-09-22 20:53:24 | INFO | epoch  34 | lr 4.39e-04 | train loss 0.1774 acc 0.9379 | val loss 0.3100 acc 0.9104 macroF1 0.9100 | 5.0s  *best*
+2026-09-22 20:53:29 | INFO | epoch  35 | lr 4.13e-04 | train loss 0.1721 acc 0.9398 | val loss 0.3105 acc 0.9102 macroF1 0.9103 | 4.9s  *best*
+2026-09-22 20:53:34 | INFO | epoch  36 | lr 3.88e-04 | train loss 0.1630 acc 0.9431 | val loss 0.3159 acc 0.9092 macroF1 0.9089 | 4.7s
+2026-09-22 20:53:39 | INFO | epoch  37 | lr 3.62e-04 | train loss 0.1611 acc 0.9438 | val loss 0.3144 acc 0.9080 macroF1 0.9080 | 4.7s
+2026-09-22 20:53:44 | INFO | epoch  38 | lr 3.37e-04 | train loss 0.1518 acc 0.9468 | val loss 0.3063 acc 0.9092 macroF1 0.9093 | 4.6s
+2026-09-22 20:53:50 | INFO | epoch  39 | lr 3.13e-04 | train loss 0.1493 acc 0.9486 | val loss 0.3164 acc 0.9070 macroF1 0.9072 | 5.0s
+2026-09-22 20:53:54 | INFO | epoch  40 | lr 2.89e-04 | train loss 0.1433 acc 0.9503 | val loss 0.3104 acc 0.9080 macroF1 0.9081 | 4.5s
+2026-09-22 20:53:59 | INFO | epoch  41 | lr 2.65e-04 | train loss 0.1391 acc 0.9515 | val loss 0.3213 acc 0.9078 macroF1 0.9077 | 4.5s
+2026-09-22 20:54:04 | INFO | epoch  42 | lr 2.42e-04 | train loss 0.1379 acc 0.9517 | val loss 0.3106 acc 0.9096 macroF1 0.9096 | 4.8s
+2026-09-22 20:54:10 | INFO | epoch  43 | lr 2.20e-04 | train loss 0.1284 acc 0.9555 | val loss 0.3102 acc 0.9134 macroF1 0.9136 | 5.1s  *best*
+2026-09-22 20:54:15 | INFO | epoch  44 | lr 1.99e-04 | train loss 0.1293 acc 0.9553 | val loss 0.3082 acc 0.9120 macroF1 0.9118 | 5.1s
+2026-09-22 20:54:20 | INFO | epoch  45 | lr 1.79e-04 | train loss 0.1212 acc 0.9583 | val loss 0.3093 acc 0.9112 macroF1 0.9110 | 4.9s
+2026-09-22 20:54:26 | INFO | epoch  46 | lr 1.60e-04 | train loss 0.1155 acc 0.9608 | val loss 0.3081 acc 0.9152 macroF1 0.9152 | 5.0s  *best*
+2026-09-22 20:54:31 | INFO | epoch  47 | lr 1.41e-04 | train loss 0.1144 acc 0.9600 | val loss 0.3097 acc 0.9116 macroF1 0.9117 | 5.0s
+2026-09-22 20:54:37 | INFO | epoch  48 | lr 1.24e-04 | train loss 0.1090 acc 0.9631 | val loss 0.3077 acc 0.9146 macroF1 0.9144 | 5.6s
+2026-09-22 20:54:42 | INFO | epoch  49 | lr 1.08e-04 | train loss 0.1064 acc 0.9627 | val loss 0.3149 acc 0.9134 macroF1 0.9133 | 5.1s
+2026-09-22 20:54:48 | INFO | epoch  50 | lr 9.25e-05 | train loss 0.1071 acc 0.9621 | val loss 0.3127 acc 0.9140 macroF1 0.9139 | 5.3s
+2026-09-22 20:54:53 | INFO | epoch  51 | lr 7.85e-05 | train loss 0.1072 acc 0.9627 | val loss 0.3093 acc 0.9140 macroF1 0.9139 | 5.3s
+2026-09-22 20:54:59 | INFO | epoch  52 | lr 6.58e-05 | train loss 0.1015 acc 0.9643 | val loss 0.3182 acc 0.9154 macroF1 0.9152 | 5.3s
+2026-09-22 20:55:05 | INFO | epoch  53 | lr 5.42e-05 | train loss 0.1000 acc 0.9650 | val loss 0.3136 acc 0.9136 macroF1 0.9135 | 5.3s
+2026-09-22 20:55:10 | INFO | epoch  54 | lr 4.40e-05 | train loss 0.0990 acc 0.9654 | val loss 0.3102 acc 0.9142 macroF1 0.9140 | 5.3s
+2026-09-22 20:55:16 | INFO | epoch  55 | lr 3.50e-05 | train loss 0.0982 acc 0.9660 | val loss 0.3119 acc 0.9136 macroF1 0.9135 | 5.3s
+2026-09-22 20:55:22 | INFO | epoch  56 | lr 2.74e-05 | train loss 0.0994 acc 0.9655 | val loss 0.3112 acc 0.9150 macroF1 0.9149 | 5.5s
+2026-09-22 20:55:27 | INFO | epoch  57 | lr 2.12e-05 | train loss 0.0976 acc 0.9664 | val loss 0.3090 acc 0.9174 macroF1 0.9172 | 5.4s  *best*
+2026-09-22 20:55:33 | INFO | epoch  58 | lr 1.63e-05 | train loss 0.0974 acc 0.9663 | val loss 0.3110 acc 0.9156 macroF1 0.9154 | 5.2s
+2026-09-22 20:55:39 | INFO | epoch  59 | lr 1.28e-05 | train loss 0.0980 acc 0.9668 | val loss 0.3087 acc 0.9158 macroF1 0.9155 | 5.3s
+2026-09-22 20:55:44 | INFO | epoch  60 | lr 1.07e-05 | train loss 0.0944 acc 0.9679 | val loss 0.3118 acc 0.9154 macroF1 0.9152 | 5.3s
+2026-09-22 20:55:44 | INFO | Best epoch 57 | val macroF1 0.9172 | val acc 0.9174 | train time 297.8s
+2026-09-22 20:55:50 | INFO | [test] acc 0.9165 (95% CI 0.9110-0.9219) | macroF1 0.9162 (95% CI 0.9109-0.9216) | throughput 19306 img/s | latency bs1 0.35 ms
+2026-09-22 20:55:50 | INFO | Done: /home/benjamin/Documents/26/DL/CO3133-A1-draft/outputs/runs/cifar10/cnn/seed42

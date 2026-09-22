@@ -1,0 +1,29 @@
+{
+  "run_id": "mnist-mlp-s42-20260922-194759",
+  "dataset": "mnist",
+  "experiment": "mlp",
+  "model": "mlp",
+  "seed": 42,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 3,
+  "epochs_run": 3,
+  "early_stopped": false,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 3,
+  "best_val_loss": 0.08416699983676275,
+  "best_val_acc": 0.976,
+  "best_val_macro_f1": 0.9759272323442699,
+  "train_time_s": 4.917615109000508,
+  "train_time_per_epoch_s": 1.6392050363335027,
+  "wall_time_s": 5.183046072000252,
+  "parameters": {
+    "trainable": 536586,
+    "total": 536586
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/mnist_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "cfb267f780503e97",
+    "val": "0dd284b31e5cc357"
+  }
+}

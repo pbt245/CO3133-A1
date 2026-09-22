@@ -1,0 +1,29 @@
+{
+  "run_id": "cifar10-lstm-s123-20260922-210845",
+  "dataset": "cifar10",
+  "experiment": "lstm",
+  "model": "lstm",
+  "seed": 123,
+  "device": "cuda",
+  "amp": true,
+  "epochs_max": 60,
+  "epochs_run": 60,
+  "early_stopped": false,
+  "checkpoint_metric": "val_macro_f1",
+  "best_epoch": 56,
+  "best_val_loss": 1.183654335975647,
+  "best_val_acc": 0.6954,
+  "best_val_macro_f1": 0.6957929511794207,
+  "train_time_s": 102.93878743700589,
+  "train_time_per_epoch_s": 1.7156464572834313,
+  "wall_time_s": 109.63526203699985,
+  "parameters": {
+    "trainable": 891402,
+    "total": 891402
+  },
+  "split_file": "/home/benjamin/Documents/26/DL/CO3133-A1-draft/data/splits/cifar10_split42_val0.1.json",
+  "split_fingerprints": {
+    "train": "b99301bfd9655f1c",
+    "val": "280540fcdfde8a41"
+  }
+}
