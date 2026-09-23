@@ -6,7 +6,8 @@ data split and one evaluation protocol.
 
 - Debug dataset: **MNIST** · Main comparison: **Fashion-MNIST** · Extension dataset: **CIFAR-10**
 - Chosen optional extensions: **LSTM vs GRU**, **CIFAR-10 experiments**
-- Assignment page: `[link to GitHub Pages assignment1.html]` · Report: `[link]` · AI usage log: `AI_USAGE.md`
+- Assignment page: [`[link to GitHub Pages assignment1.html]`](https://pbt245.github.io/CO3133-DLIA/)
+- Report: `[link]`
 
 ## Repository structure
 
@@ -106,15 +107,16 @@ flag), `train.log`, `history.csv`, `train_summary.json`, and `eval/test_metrics.
 checkpoint epoch and SHA-256). `outputs/comparison/<dataset>/runs.csv` maps every reported number to its
 run_id, commit, split fingerprint and checkpoint hash.
 
-Recommended: commit all code and `data/splits/`, tag it (`git tag a1-final`), then run the final experiments
-on the clean tree.
-
 Seeds: data split seed 42 (fixed); training seeds 42, 123, 2026. `deterministic: true` in the config enables
 deterministic cuDNN/PyTorch kernels at some speed cost; otherwise GPU results may vary slightly between runs.
 
 ## 6. Hardware
 
-`[fill in from env.json: GPU / CPU, RAM, OS, CUDA, PyTorch version]`
+- GPU: NVIDIA GeForce RTX 3060 (12 GB VRAM); 
+- CPU: 12 cores; RAM: N/A; 
+- OS: Arch Linux (Linux 7.2.6); 
+- CUDA: 12.6; 
+- PyTorch: 2.14.0+cu126
 
 ## 7. Checkpoints
 
