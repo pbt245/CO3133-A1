@@ -4,9 +4,15 @@ __pycache__/
 venv/
 .ipynb_checkpoints/
 .DS_Store
+.vscode/
 
 # raw datasets are downloaded by scripts/download_data.py (not committed)
 data/raw/
+
+slides/talk-script/
+slides/*
+!slides/slides.pdf
+
 
 # checkpoints are shared through a release / drive link (see README), not git
 outputs/runs/**/checkpoints/
