@@ -7,7 +7,7 @@ data split and one evaluation protocol.
 - Debug dataset: **MNIST** · Main comparison: **Fashion-MNIST** · Extension dataset: **CIFAR-10**
 - Chosen optional extensions: **LSTM vs GRU**, **CIFAR-10 experiments**
 - Assignment page: [`[link to GitHub Pages assignment1.html]`](https://pbt245.github.io/CO3133-DLIA/)
-- Report: `[link]`
+- Report: [`[link to report]`](https://drive.google.com/drive/folders/1fyGWHi6u-8Dm2rc7zLr3RzUCZCPXCrRx)
 
 ## Repository structure
 
